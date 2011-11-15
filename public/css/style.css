@@ -208,10 +208,24 @@ td { vertical-align: top; }
 
 
 /* ==|== primary styles =====================================================
-   Author: 
+   Author: Vasili Zolotov
    ========================================================================== */
 
+header {
+    color: #eee;
+    font-family: Arial, Sans-Serif;
+    font-size: 5em;
+    font-weight: bold;
+}
 
+header span {
+    cursor: pointer;
+    padding: 10px;
+}
+
+header span:hover {
+    color: #e77;
+}
 
 
 
