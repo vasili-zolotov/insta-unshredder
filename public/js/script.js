@@ -1,6 +1,6 @@
 /* Author: Vasili Zolotov
  
-Instragram challenge unshredder
+Instragram challenge unshredder solution
 */
 
 var step = 32;
@@ -58,12 +58,10 @@ function processImage( img ) {
         
     }
     
-    
     debug.index = index;
     debug.dmax = dmax;
     debug.left = left;
     debug.dsum = dsum;
-    debug.dnorm = dsum / slices.length;
 }
 
 function distance( left, right ) {
@@ -77,7 +75,7 @@ function distance( left, right ) {
 }
 
 function drawSlice( slice, slot ) {
-    var canvas = document.getElementById("result");
+    var canvas = document.getElementById("solution");
     var context = canvas.getContext("2d");
     context.putImageData( slices[slice], slot*step, 0 );
     context.textBaseline = "top";
