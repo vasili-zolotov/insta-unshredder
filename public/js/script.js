@@ -13,6 +13,9 @@ function loadImage( path ) {
     var srcImage = new Image();
     srcImage.onload = function() { processImage( srcImage ); }
     srcImage.src = path;
+    var context = document.getElementById("source").getContext("2d");
+    context.textBaseline = "top";
+    context.fillText( "Loading...", 10 , 10 );
 }
 
 function processImage( img ) {
@@ -75,8 +78,7 @@ function distance( left, right ) {
 }
 
 function drawSlice( slice, slot ) {
-    var canvas = document.getElementById("solution");
-    var context = canvas.getContext("2d");
+    var context = document.getElementById("solution").getContext("2d");
     context.putImageData( slices[slice], slot*step, 0 );
     context.textBaseline = "top";
     context.fillText( slice.toString(), slot*step + 1 , 1);
